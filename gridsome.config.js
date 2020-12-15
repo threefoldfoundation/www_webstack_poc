@@ -36,8 +36,63 @@ module.exports = {
         {
             use: '@gridsome/source-filesystem',
             options: {
+                typeName: 'HowItWorks',
+                path: './content/page/**/how_it_works/**/*.md',
+            }
+        },
+
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
                 typeName: 'Header',
                 path: './content/page/**/header/*.md',
+            }
+        },
+
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
+                typeName: 'Product',
+                path: './content/page/**/productData/**/*.md',
+            }
+        },
+
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
+                typeName: 'Features',
+                path: './content/page/**/features/**/*.md',
+            }
+        },
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
+                typeName: 'Logo',
+                path: './content/page/**/logos/**/*.md',
+            }
+        },
+
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
+                typeName: 'Cta',
+                path: './content/page/**/cta/*.md',
+            }
+        },
+
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
+                typeName: 'SignUp',
+                path: './content/page/**/signup/*.md',
+            }
+        },
+
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
+                typeName: 'Comparison',
+                path: './content/page/**/comparison/**/*.md',
             }
         },
 
@@ -50,7 +105,17 @@ module.exports = {
                     cards: 'Card',
                     slides: 'Slide',
                     contactData: 'Contact',
-                    header: 'Header'
+                    header: 'Header',
+                    howItWorks: 'HowItWorks',
+                    howItWorksMain: 'HowItWorks',
+                    productData: 'Product',
+                    featuresMain: 'Features',
+                    features: 'Features',
+                    logos: 'Logo',
+                    cta: 'Cta',
+                    signup: 'SignUp',
+                    comparisonMain: 'Comparison',
+                    comparisonSecs: 'Comparison'
                 }
             }
         },
