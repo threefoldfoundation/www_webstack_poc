@@ -1,12 +1,9 @@
 ---
 id: why
 header: header_why
-slides:
-  [
-    peer-to-peer,
-    availability,
-    sustainability,
-  ]
+slides: [peer-to-peer, availability, sustainability]
+roadmap:
+  [why_roadmap_post1, why_roadmap_post2, why_roadmap_post3, why_roadmap_post4]
 ---
 
 <!-- header_title: The world needs a Technological Reset

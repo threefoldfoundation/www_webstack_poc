@@ -5,7 +5,7 @@
         v-if="$page.markdownPage.header"
         :header="$page.markdownPage.header"
       />
-      
+
       <Header
         v-if="
           $page.markdownPage.id !== 'contact' &&
@@ -34,7 +34,7 @@
         :main="$page.markdownPage.howItWorksMain"
       />
 
-       <!-- <Features
+      <!-- <Features
         v-if="$page.markdownPage.features.length > 0"
         :main="$page.markdownPage.featuresMain"
         :features="$page.markdownPage.features"
@@ -55,7 +55,7 @@
         :HIWData="$page.markdownPage.howItWorks"
         :main="$page.markdownPage.howItWorksMain"
       /> -->
-      
+
       <VerticalNav
         :slides="$page.markdownPage.slides"
         v-if="$page.markdownPage.slides.length > 0"
@@ -100,6 +100,11 @@
           />
         </ClientOnly>
       </template>
+
+      <Roadmap
+        v-if="$page.markdownPage.roadmap.length > 0"
+        :roadmap="$page.markdownPage.roadmap"
+      />
     </div>
   </Layout>
 </template>
@@ -206,6 +211,11 @@
           title
           excerpt
         }
+        roadmap{
+          id
+          title
+          excerpt
+        }
     }
   }
 
@@ -224,6 +234,7 @@ import logoShowcase from "~/components/marketing/sections/cta-sections/logoShowc
 import CallToAction from "~/components/custom/sections/CallToAction.vue";
 import SignUp from "~/components/custom/sections/SignUp.vue";
 import Comparison from "~/components/custom/sections/Comparison.vue";
+import Roadmap from "~/components/custom/sections/Roadmap.vue";
 
 export default {
   components: {
@@ -239,6 +250,7 @@ export default {
     CallToAction,
     SignUp,
     Comparison,
+    Roadmap,
   },
   metaInfo() {
     return {

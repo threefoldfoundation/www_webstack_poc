@@ -107,6 +107,14 @@ module.exports = {
         {
             use: '@gridsome/source-filesystem',
             options: {
+                typeName: 'Roadmap',
+                path: './content/page/**/roadmap/*.md',
+            }
+        },
+
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
                 typeName: 'MarkdownPage',
                 path: './content/page/*/*.md',
                 refs: {
@@ -125,7 +133,8 @@ module.exports = {
                     comparisonMain: 'Comparison',
                     comparisonSecs: 'Comparison',
                     howItWorksMain_2: 'HowItWorks_2',
-                    howItWorks_2: 'HowItWorks_2'
+                    howItWorks_2: 'HowItWorks_2',
+                    roadmap: 'Roadmap'
                 }
             }
         },
