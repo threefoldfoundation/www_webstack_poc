@@ -6,17 +6,7 @@
         :header="$page.markdownPage.header"
       />
 
-      <Header
-        v-if="
-          $page.markdownPage.id !== 'contact' &&
-          $page.markdownPage.header_title &&
-          $page.markdownPage.header_title != ''
-        "
-        :title="$page.markdownPage.header_title"
-        :image="$page.markdownPage.header_image"
-        :altImg="$page.markdownPage.header_altImg"
-        :excerpt="$page.markdownPage.header_excerpt"
-      />
+      <Header />
 
       <GetInTouch
         :contacts="$page.markdownPage.contactData"
