@@ -1,5 +1,5 @@
 ---
 id: how_it_works_main
-title: How Does It Work?
-image: ./how_it_works.png
+title: Largest p2p Internet Grid is Live
+image: ./token_overview.png
 ---

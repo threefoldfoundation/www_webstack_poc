@@ -1,11 +1,11 @@
 ---
-id: header
+id: solution_header
 title: ThreeFold Farming
-subtitle: Be The Internet
-btn1: Learn more
-link1: /link1
-btn2: Stay Updated
-link2: /link2
+subtitle: Powering the next-gen Internet
+btn1: Become a Farmer
+link1: /blog
+btn2: Learn More
+link2: /blog
 ---
 
-We're going back to the original vision of the Internet: By the people, for the people. With industry-transforming technology. And we are already live today.
+Our open-source and lightweight OS and autonomous technology powers the decentralization of the Internet with more Security, Privacy and Performance-Efficiency.

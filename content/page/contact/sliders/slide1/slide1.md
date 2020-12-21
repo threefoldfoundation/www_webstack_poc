@@ -1,7 +1,7 @@
 ---
 id: our_philosophy
 title: our philosophy
-image: ./valuesheader2.png
+image: ''
 order: 6
 
 ---

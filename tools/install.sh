@@ -1,7 +1,7 @@
 set -e
 set +x
 
-export NAME=webstack_poc
+export NAME=threefold_farming
 
 # INSTALL CRYSTAL TOOLS
 
@@ -42,6 +42,5 @@ set +e
 npm install 
 
 source run.sh
-
 
 

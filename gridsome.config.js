@@ -44,6 +44,14 @@ module.exports = {
         {
             use: '@gridsome/source-filesystem',
             options: {
+                typeName: 'HowItWorks_2',
+                path: './content/page/**/how_it_works_2/**/*.md',
+            }
+        },
+
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
                 typeName: 'Header',
                 path: './content/page/**/header/*.md',
             }
@@ -67,7 +75,7 @@ module.exports = {
         {
             use: '@gridsome/source-filesystem',
             options: {
-                typeName: 'Logo',
+                typeName: 'Logos',
                 path: './content/page/**/logos/**/*.md',
             }
         },
@@ -111,11 +119,13 @@ module.exports = {
                     productData: 'Product',
                     featuresMain: 'Features',
                     features: 'Features',
-                    logos: 'Logo',
+                    logos: 'Logos',
                     cta: 'Cta',
                     signup: 'SignUp',
                     comparisonMain: 'Comparison',
-                    comparisonSecs: 'Comparison'
+                    comparisonSecs: 'Comparison',
+                    howItWorksMain_2: 'HowItWorks_2',
+                    howItWorks_2: 'HowItWorks_2'
                 }
             }
         },
@@ -261,6 +271,9 @@ module.exports = {
             }
         },
     ],
+    chainWebpack: config => {
+        config.resolve.alias.set('@images', '@/assets/images')
+    },
     templates: {
         MarkdownPage: [{
             path: '/:id',
@@ -272,8 +285,6 @@ module.exports = {
             path: '/blog/tags/:id',
             component: '~/templates/Tag.vue'
         }],
-
-
 
         NewsTag: [{
             path: '/news/tags/:id',

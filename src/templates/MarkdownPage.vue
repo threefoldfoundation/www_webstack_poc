@@ -1,6 +1,11 @@
 <template>
   <Layout :hideHeader="true" :disableScroll="true">
     <div class="container sm:pxi-0 mx-auto overflow-x-hidden py-5">
+      <SolutionsHeader
+        v-if="$page.markdownPage.header"
+        :header="$page.markdownPage.header"
+      />
+      
       <Header
         v-if="
           $page.markdownPage.id !== 'contact' &&
@@ -12,31 +17,16 @@
         :altImg="$page.markdownPage.header_altImg"
         :excerpt="$page.markdownPage.header_excerpt"
       />
-      <VerticalNav
-        :slides="$page.markdownPage.slides"
-        v-if="$page.markdownPage.slides.length > 0"
-      />
-      <div v-html="$page.markdownPage.content"></div>
-      <NewCard
-        v-for="card in $page.markdownPage.cards"
-        :key="card.id"
-        :card="card"
-      />
 
       <GetInTouch
         :contacts="$page.markdownPage.contactData"
         v-if="$page.markdownPage.contactData.length > 0"
       />
 
-      <SolutionsHeader
-        v-if="$page.markdownPage.header"
-        :header="$page.markdownPage.header"
-      />
-
-      <ShowcaseProducts
+      <!-- <ShowcaseProducts
         :products="$page.markdownPage.productData"
         v-if="$page.markdownPage.productData.length > 0"
-      />
+      /> -->
 
       <HowItWorks
         v-if="$page.markdownPage.howItWorks.length > 0"
@@ -44,29 +34,70 @@
         :main="$page.markdownPage.howItWorksMain"
       />
 
-      <Features
+       <!-- <Features
         v-if="$page.markdownPage.features.length > 0"
         :main="$page.markdownPage.featuresMain"
         :features="$page.markdownPage.features"
-      />
+      /> -->
+
       <template>
         <ClientOnly>
           <Comparison
+            v-if="$page.markdownPage.comparisonSecs.length > 0"
             :main="$page.markdownPage.comparisonMain"
             :sections="$page.markdownPage.comparisonSecs"
           />
         </ClientOnly>
       </template>
 
+      <!-- <HowItWorks
+        v-if="$page.markdownPage.howItWorks.length > 0"
+        :HIWData="$page.markdownPage.howItWorks"
+        :main="$page.markdownPage.howItWorksMain"
+      /> -->
+      
+      <VerticalNav
+        :slides="$page.markdownPage.slides"
+        v-if="$page.markdownPage.slides.length > 0"
+      />
+
+      <div v-html="$page.markdownPage.content"></div>
+      <NewCard
+        v-for="card in $page.markdownPage.cards"
+        :key="card.id"
+        :card="card"
+      />
+
+      <!-- <img
+        v-if="$page.markdownPage.solution_image"
+        :src="$page.markdownPage.solution_image.src"
+      />
+
       <logoShowcase
         v-if="$page.markdownPage.logos.length > 0"
         :logos="$page.markdownPage.logos"
+      /> -->
+
+      <template>
+        <ClientOnly>
+          <CallToAction
+            v-if="$page.markdownPage.cta"
+            :cta="$page.markdownPage.cta"
+          />
+        </ClientOnly>
+      </template>
+
+      <img
+        v-if="$page.markdownPage.solution_image"
+        :src="$page.markdownPage.solution_image.src"
       />
 
       <template>
         <ClientOnly>
-          <CallToAction :cta="$page.markdownPage.cta" />
-          <SignUp :signup="$page.markdownPage.signup" />
+          <SignUp
+            v-if="$page.markdownPage.signup"
+            :signup="$page.markdownPage.signup"
+          />
         </ClientOnly>
       </template>
     </div>
@@ -83,6 +114,7 @@
         header_altImg
         header_title
         header_image
+        solution_image
         slides{
           id
           title

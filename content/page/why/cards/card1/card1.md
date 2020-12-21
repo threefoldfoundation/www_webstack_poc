@@ -1,10 +1,10 @@
 ---
 id: why1
-title: The Environment Demands It
+title: Peer-to-peer puts people back in control
 image: ./card1.jpeg
-button: Read More on Our Blog
-link: ''
+button: Learn More
+link: '/blog'
 order: 1
-excerpt: Data centers are neither scalable nor efficient and consume up to 10% world’s electricity today. The huge constructions are almost always built to service current users even better, but fail to reach remote areas and emerging markets. The ThreeFold Grid uses up to 10 times less power to run infrastruce. The decentralized nature of the ThreeFold Grid allows for capacity to be put on the grid anywhere where there network infrastructure and stable power supply.
+excerpt: We created a complete peer-to-peer architecture that can assist the world in it's journey towards decentralization. Blockchain and edge computing were only steps towards that end goal. Our model removes complexity and inefficiencies. No intermediaries. No marketing. No gimmicks. Everything is automated. Completely end-to-end. But it doesn't end there. Users get full control over their data with 100% security and privacy. Not even ThreeFold can access it.
 ---
 
