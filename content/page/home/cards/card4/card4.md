@@ -1,9 +1,10 @@
 ---
 id: home4
-title: The Token of the Internet
-image: ./home_card_4.png
-button: Learn More
-link: /token
+title: The world needs it
+image: ./card4.jpeg
+button: Why
+link:
 order: 4
-excerpt: The ThreeFold Token is used to reserve compute & capacity on the ThreeFold Grid. Dive into the Tokenomics of the medium of exchange of the new Internet economy.
 ---
+
+Original intent of internet = free environment, many tech leaders complain today = algorythms exploit us today's internet is centralized and controlled by large IT companies because they own & operate the data centers current alternatives are pain killers put overcomplex & expensive, threefold technology makes original vision possible = owned by everyone, anywhere.

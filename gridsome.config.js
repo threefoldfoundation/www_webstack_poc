@@ -75,7 +75,7 @@ module.exports = {
         {
             use: '@gridsome/source-filesystem',
             options: {
-                typeName: 'Logos',
+                typeName: 'Logo',
                 path: './content/page/**/logos/**/*.md',
             }
         },
@@ -125,9 +125,10 @@ module.exports = {
                     howItWorks: 'HowItWorks',
                     howItWorksMain: 'HowItWorks',
                     productData: 'Product',
+                    productMain: 'Product',
                     featuresMain: 'Features',
                     features: 'Features',
-                    logos: 'Logos',
+                    logos: 'Logo',
                     cta: 'Cta',
                     signup: 'SignUp',
                     comparisonMain: 'Comparison',

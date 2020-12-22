@@ -1,72 +1,64 @@
 <template>
   <Layout :hideHeader="true" :disableScroll="true">
     <div class="container sm:pxi-0 mx-auto overflow-x-hidden py-5">
-      <SolutionsHeader
-        v-if="$page.markdownPage.header"
-        :header="$page.markdownPage.header"
+      <Header
+        v-if="
+          $page.markdownPage.id !== 'contact' &&
+          $page.markdownPage.header_title &&
+          $page.markdownPage.header_title != ''
+        "
+        :title="$page.markdownPage.header_title"
+        :image="$page.markdownPage.header_image"
+        :altImg="$page.markdownPage.header_altImg"
+        :excerpt="$page.markdownPage.header_excerpt"
       />
-
-      <Header />
-
-      <GetInTouch
-        :contacts="$page.markdownPage.contactData"
-        v-if="$page.markdownPage.contactData.length > 0"
-      />
-
-      <!-- <ShowcaseProducts
-        :products="$page.markdownPage.productData"
-        v-if="$page.markdownPage.productData.length > 0"
-      /> -->
-
-      <HowItWorks
-        v-if="$page.markdownPage.howItWorks.length > 0"
-        :HIWData="$page.markdownPage.howItWorks"
-        :main="$page.markdownPage.howItWorksMain"
-      />
-
-      <!-- <Features
-        v-if="$page.markdownPage.features.length > 0"
-        :main="$page.markdownPage.featuresMain"
-        :features="$page.markdownPage.features"
-      /> -->
-
-      <template>
-        <ClientOnly>
-          <Comparison
-            v-if="$page.markdownPage.comparisonSecs.length > 0"
-            :main="$page.markdownPage.comparisonMain"
-            :sections="$page.markdownPage.comparisonSecs"
-          />
-        </ClientOnly>
-      </template>
-
-      <!-- <HowItWorks
-        v-if="$page.markdownPage.howItWorks.length > 0"
-        :HIWData="$page.markdownPage.howItWorks"
-        :main="$page.markdownPage.howItWorksMain"
-      /> -->
 
       <VerticalNav
         :slides="$page.markdownPage.slides"
         v-if="$page.markdownPage.slides.length > 0"
       />
 
-      <div v-html="$page.markdownPage.content"></div>
       <NewCard
         v-for="card in $page.markdownPage.cards"
         :key="card.id"
         :card="card"
       />
 
-      <!-- <img
-        v-if="$page.markdownPage.solution_image"
-        :src="$page.markdownPage.solution_image.src"
+      <GetInTouch
+        :contacts="$page.markdownPage.contactData"
+        v-if="$page.markdownPage.contactData.length > 0"
       />
+
+      <SolutionsHeader
+        v-if="$page.markdownPage.header"
+        :header="$page.markdownPage.header"
+      />
+
+      <ShowcaseProducts
+        :main="$page.markdownPage.productMain"
+        :products="$page.markdownPage.productData"
+        v-if="$page.markdownPage.productData.length > 0"
+      />
+
+      <HowItWorks
+        v-if="$page.markdownPage.howItWorks.length > 0"
+        :HIWData="$page.markdownPage.howItWorks"
+        :main="$page.markdownPage.howItWorksMain"
+      />
+      <template>
+        <ClientOnly>
+          <Features
+            v-if="$page.markdownPage.features.length > 0"
+            :main="$page.markdownPage.featuresMain"
+            :features="$page.markdownPage.features"
+          />
+        </ClientOnly>
+      </template>
 
       <logoShowcase
         v-if="$page.markdownPage.logos.length > 0"
         :logos="$page.markdownPage.logos"
-      /> -->
+      />
 
       <template>
         <ClientOnly>
@@ -74,16 +66,6 @@
             v-if="$page.markdownPage.cta"
             :cta="$page.markdownPage.cta"
           />
-        </ClientOnly>
-      </template>
-
-      <img
-        v-if="$page.markdownPage.solution_image"
-        :src="$page.markdownPage.solution_image.src"
-      />
-
-      <template>
-        <ClientOnly>
           <SignUp
             v-if="$page.markdownPage.signup"
             :signup="$page.markdownPage.signup"
@@ -95,6 +77,8 @@
         v-if="$page.markdownPage.roadmap.length > 0"
         :roadmap="$page.markdownPage.roadmap"
       />
+
+      <FourTiersWithToggle />
     </div>
   </Layout>
 </template>
@@ -104,16 +88,15 @@
     markdownPage(id: $id) {
         id
         path
-        content
+        excerpt
         header_excerpt
         header_altImg
         header_title
         header_image
-        solution_image
         slides{
           id
           title
-          content
+          excerpt
           image
           order
         }
@@ -151,10 +134,15 @@
          title
          image
        }
-       productData{
-        id
+       productMain{
+         id
+         subtitle
          title
-        content
+       }
+       productData{
+         id
+         title
+         excerpt
        }
         featuresMain{
           id
@@ -225,6 +213,7 @@ import CallToAction from "~/components/custom/sections/CallToAction.vue";
 import SignUp from "~/components/custom/sections/SignUp.vue";
 import Comparison from "~/components/custom/sections/Comparison.vue";
 import Roadmap from "~/components/custom/sections/Roadmap.vue";
+import FourTiersWithToggle from "~/components/marketing/sections/cta-sections/pricing/four_tiers_with_toggle.vue";
 
 export default {
   components: {
@@ -241,11 +230,15 @@ export default {
     SignUp,
     Comparison,
     Roadmap,
+    FourTiersWithToggle,
   },
   metaInfo() {
     return {
       title: this.$page.markdownPage.title,
     };
+  },
+  mounted() {
+    // console.log(this.$page.markdownPage.productData);
   },
 };
 </script>

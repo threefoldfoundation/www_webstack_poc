@@ -1,7 +1,7 @@
 ---
 id: sustainable
 title: Sustainable
-image: ''
+image:
 order: 2
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: performance
 title: Performance
-image: ''
+image:
 order: 6
 
 ---
