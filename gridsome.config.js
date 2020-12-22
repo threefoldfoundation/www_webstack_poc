@@ -75,7 +75,7 @@ module.exports = {
         {
             use: '@gridsome/source-filesystem',
             options: {
-                typeName: 'Logos',
+                typeName: 'Logo',
                 path: './content/page/**/logos/**/*.md',
             }
         },
@@ -107,6 +107,22 @@ module.exports = {
         {
             use: '@gridsome/source-filesystem',
             options: {
+                typeName: 'Roadmap',
+                path: './content/page/**/roadmap/*.md',
+            }
+        },
+
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
+                typeName: 'PricingPlans',
+                path: './content/page/**/pricing_plans/**/*.md',
+            }
+        },
+
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
                 typeName: 'MarkdownPage',
                 path: './content/page/*/*.md',
                 refs: {
@@ -117,15 +133,19 @@ module.exports = {
                     howItWorks: 'HowItWorks',
                     howItWorksMain: 'HowItWorks',
                     productData: 'Product',
+                    productMain: 'Product',
                     featuresMain: 'Features',
                     features: 'Features',
-                    logos: 'Logos',
+                    logos: 'Logo',
                     cta: 'Cta',
                     signup: 'SignUp',
                     comparisonMain: 'Comparison',
                     comparisonSecs: 'Comparison',
                     howItWorksMain_2: 'HowItWorks_2',
-                    howItWorks_2: 'HowItWorks_2'
+                    howItWorks_2: 'HowItWorks_2',
+                    roadmap: 'Roadmap',
+                    pricing_plansMain: 'PricingPlans',
+                    pricingPlans: 'PricingPlans'
                 }
             }
         },

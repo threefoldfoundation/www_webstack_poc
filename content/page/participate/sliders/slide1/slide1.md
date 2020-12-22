@@ -1,7 +1,7 @@
 ---
 id: participateSlide1
 title: Titan Node v2
-image: ''
+image:
 order: 6
 
 ---

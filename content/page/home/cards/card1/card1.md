@@ -1,10 +1,10 @@
 ---
 id: home
-title: Powering the next Technological Era
-image: ./home_card_1.png
-button: Learn More
-link: '/why'
+title: How it works
+image: ./card1.jpeg
+button: Get Started
+link: /why
 order: 1
-excerpt: Today's Internet is highly inefficient, unsustainable, exploits user data, and is extremely centralized. ThreeFold started from scratch, and built the Internet infrastructure the worlds need for exponential evolution.
 ---
 
+You can help build the new inter-net infrastructure. Farmers connect capacity + compute. All you need is electricity + network + 3node. Link to solution. Get rewarded with tokens. Users reserve capacity.

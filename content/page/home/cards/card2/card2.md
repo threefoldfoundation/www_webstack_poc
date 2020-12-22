@@ -1,9 +1,10 @@
 ---
 id: home2
-title: A model in which anyone can partake
-image: ./home_card_2.png
-button: Learn More
-link: /solution
+title: The Market
+image: ./card2.jpeg
+button:
+link:
 order: 2
-excerpt: Enabling a simple way for anyone to partake in the Internet economy. All you need to get started is a node, plug it into an electricity outlet, and to connect it to your network coverage.
 ---
+
+The Cloud is the engine for the current internet. To change the behaviour of the internet we need a new engine. Estimated cloud revenue 2027 = 1.1 trillion. 200 billion revenue for SAAS cloud. 4 Billion people connected today. 50% left to connect. If 10\$ pp = 500 Billion. Estimated capacity demand for 2025 = 175 ZB.

@@ -1,6 +1,6 @@
 ---
 id: solution
-header: solution_header
+header: header
 cards: [solution_card]
 slides:
   [
@@ -12,16 +12,18 @@ slides:
   ]
 solution_image: ./grid_live.png
 cta: solution_cta
+howItWorksMain: how_it_works_main
+howItWorks: [
+  farmers_connect_capacity_and_compute,
+  get_rewarded_with_tokens,
+  users_reserve_capacity,
+]
+productData: [myproducts, test2]
+featuresMain: Feature_main	
+features: [high_durability, versatility, value_based_price, variety]	
+logos: [solution_logo1, solution_logo2, solution_logo3, solution_logo4, solution_logo5, solution_logo6]	
+signup: solution_signup	
+comparisonMain: comparison_main	
+comparisonSecs: [centralized, threefold, distributed]
+productMain: solution_product
 ---
-<!-- 
-featuresMain: Feature_main
-features: [high_durability, versatility, value_based_price, variety] -->
-
-<!-- signup: solution_signup -->
-
-<!-- productData: [solution_product1, solution_product2, solution_product3] -->
-
-<!-- header_title: Powering the next-gen Internet
-header_image: ./solution_header.png
-header_altImg: solution_header
-header_excerpt: Our open-source lightweight OS and autonomous technology powers the decentralization of the Internet with more Security, Privacy & Performance-Efficiency. -->

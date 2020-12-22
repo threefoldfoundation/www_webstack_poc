@@ -1,9 +1,8 @@
 ---
 id: our_philosophy
 title: our philosophy
-image: ''
+image: valuesheader2.png
 order: 6
-
 ---
 
 We are sparking a movement to bring the world a truly peer-to-peer internet.  
