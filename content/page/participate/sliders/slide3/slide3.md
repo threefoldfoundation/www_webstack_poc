@@ -1,7 +1,7 @@
 ---
 id: participateSlide3
 title: Scale Out Node
-image: ''
+image:
 order: 4
 ---
 

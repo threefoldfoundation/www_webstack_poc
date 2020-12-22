@@ -1,7 +1,7 @@
 ---
 id: inclusive
 title: Inclusive
-image: ''
+image:
 order: 3
 ---
 

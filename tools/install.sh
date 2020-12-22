@@ -1,7 +1,7 @@
 set -e
 set +x
 
-export NAME=threefold_farming
+export NAME=webstack_poc
 
 # INSTALL CRYSTAL TOOLS
 

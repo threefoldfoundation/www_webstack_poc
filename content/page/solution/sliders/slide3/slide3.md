@@ -1,7 +1,7 @@
 ---
 id: security
 title: Security
-image: ''
+image:
 order: 4
 ---
 

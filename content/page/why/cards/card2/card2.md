@@ -1,9 +1,10 @@
 ---
 id: why2
-title: An Internet available to everyone, everywhere
+title: The Technology Demands Ite
 image: ./card2.jpeg
-button: Learn More
-link: '/blog'
+button: Read More on Our Blog
+link:
 order: 1
-excerpt: As of today, about 50% of the world's population is connected to the Internet. This statistic shows a great digital divide that is present in our current world, depsite Internet access being a human right. For us, at ThreeFold, this is not acceptable as the Internet today represents access to extent information, knowledge and economic opportunities. We pledge to tackling the digital divide and to leverage an affordable and accessible internet solution to make developing and remote regions of our world digitally sovereign.
 ---
+
+Modern day technologies like 5G, IOT, AI,... demand more cloud resources near end-users. The central datacenter approach can't keep up with this deman. The ThreeFold Grid can cater to all the needs these industries as the decentralized nature of the the grid puts the capacity near the end user.

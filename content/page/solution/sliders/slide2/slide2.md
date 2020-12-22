@@ -1,7 +1,7 @@
 ---
 id: privacy
 title: Privacy
-image: ''
+image:
 order: 5
 ---
 

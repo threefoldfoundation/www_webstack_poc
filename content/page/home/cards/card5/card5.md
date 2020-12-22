@@ -1,9 +1,10 @@
 ---
 id: home5
-title: Join the Decentralization Movement
+title: Demand showcase (eVDC)
 image: ./card5.jpeg
-button: Token
-link: /community
+button: eVDC
+link:
 order: 5
-excerpt: Support the project by joining our community or by buying our token.
 ---
+
+Show evdc solution - k8s, s3, docker compatible, Quantum Safe Archive.
