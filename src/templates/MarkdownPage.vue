@@ -78,7 +78,11 @@
         :roadmap="$page.markdownPage.roadmap"
       />
 
-      <FourTiersWithToggle />
+      <FourTiersWithToggle
+        v-if="$page.markdownPage.pricingPlans.length > 0"
+        :main="$page.markdownPage.pricing_plansMain"
+        :pricingPlans="$page.markdownPage.pricingPlans"
+      />
     </div>
   </Layout>
 </template>
@@ -193,6 +197,24 @@
           id
           title
           excerpt
+        }
+        pricing_plansMain{
+          id
+          title
+          button1
+          button2
+          excerpt
+        }
+        pricingPlans{
+          id
+          title
+          excerpt
+          price
+          duration
+          button
+          link
+          includeTitle
+          options
         }
     }
   }

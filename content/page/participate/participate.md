@@ -9,6 +9,9 @@ comparisonSecs:
   [participate_comparison1, participate_comparison2, participate_comparison3]
 solution_image: ./participate.png
 cta: participate_cta
+pricing_plansMain: participate_pricing
+pricingPlans:
+  [participate_plan1, participate_plan2, participate_plan3, participate_plan4]
 ---
 
 # TITLE
