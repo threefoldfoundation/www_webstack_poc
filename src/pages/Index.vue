@@ -10,6 +10,13 @@
         :link="$page.markdownPage.link"
       />
     </div>
+
+     <template>
+      <ClientOnly>
+        <SignUp :signup="$page.markdownPage.signup" v-if="$page.markdownPage.signup" />
+      </ClientOnly>
+    </template>
+    
   </Layout>
 </template>
 

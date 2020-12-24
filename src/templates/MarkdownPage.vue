@@ -37,7 +37,7 @@
       <ShowcaseProducts
         :main="$page.markdownPage.productMain"
         :products="$page.markdownPage.productData"
-        v-if="$page.markdownPage.productData.length > 0"
+        v-if="$page.markdownPage.productData && $page.markdownPage.productData.length > 0"
       />
 
       <HowItWorks
@@ -69,6 +69,16 @@
           <SignUp
             v-if="$page.markdownPage.signup"
             :signup="$page.markdownPage.signup"
+          />
+        </ClientOnly>
+      </template>
+
+      <template>
+        <ClientOnly>
+          <Comparison
+            v-if="$page.markdownPage.comparisonSecs && $page.markdownPage.comparisonSecs.length > 0"
+            :main="$page.markdownPage.comparisonMain"
+            :sections="$page.markdownPage.comparisonSecs"
           />
         </ClientOnly>
       </template>
