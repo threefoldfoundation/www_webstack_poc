@@ -37,7 +37,10 @@
       <ShowcaseProducts
         :main="$page.markdownPage.productMain"
         :products="$page.markdownPage.productData"
-        v-if="$page.markdownPage.productData && $page.markdownPage.productData.length > 0"
+        v-if="
+          $page.markdownPage.productData &&
+          $page.markdownPage.productData.length > 0
+        "
       />
 
       <HowItWorks
@@ -76,7 +79,10 @@
       <template>
         <ClientOnly>
           <Comparison
-            v-if="$page.markdownPage.comparisonSecs && $page.markdownPage.comparisonSecs.length > 0"
+            v-if="
+              $page.markdownPage.comparisonSecs &&
+              $page.markdownPage.comparisonSecs.length > 0
+            "
             :main="$page.markdownPage.comparisonMain"
             :sections="$page.markdownPage.comparisonSecs"
           />
@@ -92,6 +98,11 @@
         v-if="$page.markdownPage.pricingPlans.length > 0"
         :main="$page.markdownPage.pricing_plansMain"
         :pricingPlans="$page.markdownPage.pricingPlans"
+      />
+
+      <WithComparisonTable
+        v-if="$page.markdownPage.plans"
+        :headers="$page.markdownPage.plans"
       />
     </div>
   </Layout>
@@ -226,6 +237,16 @@
           includeTitle
           options
         }
+        plans{
+          id
+          title
+          rows {
+            title
+            firstCol
+            secCol
+            thirdCol
+          }
+        }
     }
   }
 
@@ -245,7 +266,8 @@ import CallToAction from "~/components/custom/sections/CallToAction.vue";
 import SignUp from "~/components/custom/sections/SignUp.vue";
 import Comparison from "~/components/custom/sections/Comparison.vue";
 import Roadmap from "~/components/custom/sections/Roadmap.vue";
-import FourTiersWithToggle from "~/components/marketing/sections/cta-sections/pricing/four_tiers_with_toggle.vue";
+import FourTiersWithToggle from "~/components/marketing/sections/pricing/four_tiers_with_toggle.vue";
+import WithComparisonTable from "~/components/marketing/sections/pricing/with_comparison_table.vue";
 
 export default {
   components: {
@@ -263,14 +285,16 @@ export default {
     Comparison,
     Roadmap,
     FourTiersWithToggle,
+    WithComparisonTable,
   },
+
   metaInfo() {
     return {
       title: this.$page.markdownPage.title,
     };
   },
   mounted() {
-    // console.log(this.$page.markdownPage.productData);
+    // console.log(this.$page.markdownPage.plans);
   },
 };
 </script>

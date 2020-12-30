@@ -123,6 +123,14 @@ module.exports = {
         {
             use: '@gridsome/source-filesystem',
             options: {
+                typeName: 'Plans',
+                path: './content/page/**/withComparisonTable/**/*.md',
+            }
+        },
+
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
                 typeName: 'MarkdownPage',
                 path: './content/page/*/*.md',
                 refs: {
@@ -145,7 +153,8 @@ module.exports = {
                     howItWorks_2: 'HowItWorks_2',
                     roadmap: 'Roadmap',
                     pricing_plansMain: 'PricingPlans',
-                    pricingPlans: 'PricingPlans'
+                    pricingPlans: 'PricingPlans',
+                    plans: 'Plans'
                 }
             }
         },

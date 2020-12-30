@@ -166,10 +166,7 @@
         image(width:64, height:64, fit:inside)
         path
       }
-    }
-
-
-    
+    }    
   }
 </page-query>
 
