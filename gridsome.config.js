@@ -131,6 +131,14 @@ module.exports = {
         {
             use: '@gridsome/source-filesystem',
             options: {
+                typeName: 'InTheNews',
+                path: './content/page/**/InTheNews/*.md',
+            }
+        },
+
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
                 typeName: 'MarkdownPage',
                 path: './content/page/*/*.md',
                 refs: {
@@ -154,7 +162,8 @@ module.exports = {
                     roadmap: 'Roadmap',
                     pricing_plansMain: 'PricingPlans',
                     pricingPlans: 'PricingPlans',
-                    plans: 'Plans'
+                    plans: 'Plans',
+                    inTheNews: 'InTheNews'
                 }
             }
         },

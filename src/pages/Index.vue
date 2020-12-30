@@ -9,14 +9,12 @@
         :button="$page.markdownPage.button"
         :link="$page.markdownPage.link"
       />
-    </div>
 
-     <template>
-      <ClientOnly>
-        <SignUp :signup="$page.markdownPage.signup" v-if="$page.markdownPage.signup" />
-      </ClientOnly>
-    </template>
-    
+      <InTheNews
+        v-if="$page.markdownPage.inTheNews"
+        :news="$page.markdownPage.inTheNews"
+      />
+    </div>
   </Layout>
 </template>
 
@@ -31,6 +29,11 @@
         header_altImg
         button
         link
+        inTheNews {
+          id
+          excerpt
+          images
+        }
     }  
   }
 
@@ -38,15 +41,19 @@
 
 <script>
 import Header from "~/components/marketing/sections/cta-sections/Header.vue";
-
+import InTheNews from "~/components/marketing/sections/logo-clouds/off_white_grid.vue";
 export default {
   components: {
     Header,
+    InTheNews,
   },
   metaInfo() {
     return {
       title: this.$page.markdownPage.title,
     };
+  },
+  mounted() {
+    console.log(this.$page.markdownPage);
   },
 };
 </script>
