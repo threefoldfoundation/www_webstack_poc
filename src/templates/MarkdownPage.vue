@@ -101,7 +101,7 @@
       />
 
       <WithComparisonTable
-        v-if="$page.markdownPage.plans"
+        v-if="$page.markdownPage.plans.length > 0"
         :plans="$page.markdownPage.plans"
       />
     </div>
