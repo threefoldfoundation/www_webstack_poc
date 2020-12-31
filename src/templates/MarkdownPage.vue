@@ -102,7 +102,7 @@
 
       <WithComparisonTable
         v-if="$page.markdownPage.plans"
-        :headers="$page.markdownPage.plans"
+        :plans="$page.markdownPage.plans"
       />
     </div>
   </Layout>

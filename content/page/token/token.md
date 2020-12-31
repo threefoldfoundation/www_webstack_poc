@@ -9,5 +9,5 @@ howItWorks: [token_sec1, token_sec2, token_sec3]
 slides: [intrinsic_value, limited_supply, povered_by_stellar, token_sustainable]
 cards: [token_card2]
 signup: signup
-plans: features
+plans: [sec1, sec2, sec3]
 ---
