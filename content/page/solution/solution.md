@@ -26,4 +26,5 @@ signup: solution_signup
 comparisonMain: comparison_main	
 comparisonSecs: [centralized, threefold, distributed]
 productMain: solution_product
+brandPanel: solution_brandPanel
 ---

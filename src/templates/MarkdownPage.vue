@@ -104,6 +104,11 @@
         v-if="$page.markdownPage.plans.length > 0"
         :plans="$page.markdownPage.plans"
       />
+
+       <BrandPanel
+        :brand="$page.markdownPage.brandPanel"
+        v-if="$page.markdownPage.brandPanel"
+      />
     </div>
   </Layout>
 </template>
@@ -168,6 +173,15 @@
          id
          title
          excerpt
+       }
+       brandPanel{
+         id
+         title
+         subtitle
+         excerpt(length: 2000)
+         sourceUrl
+         btnTxt
+         image
        }
         featuresMain{
           id
@@ -268,6 +282,7 @@ import Comparison from "~/components/custom/sections/Comparison.vue";
 import Roadmap from "~/components/custom/sections/Roadmap.vue";
 import FourTiersWithToggle from "~/components/marketing/sections/pricing/four_tiers_with_toggle.vue";
 import WithComparisonTable from "~/components/marketing/sections/pricing/with_comparison_table.vue";
+import BrandPanel from "~/components/marketing/sections/cta-sections/BrandPanel.vue";
 
 export default {
   components: {
@@ -286,6 +301,7 @@ export default {
     Roadmap,
     FourTiersWithToggle,
     WithComparisonTable,
+    BrandPanel,
   },
 
   metaInfo() {

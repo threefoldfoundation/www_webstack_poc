@@ -67,6 +67,10 @@ ul {
   height: 30px;
 }
 
+.brandpanel {
+  background-color: #1072ba;
+}
+
 .no-border {
   border-width: 0px !important;
 }
@@ -257,6 +261,9 @@ body[data-theme="dark"] {
   .post-content-text {
     @apply text-gray-300;
   }
+  .brandpanel {
+    background-color: #1072ba !important;
+}
   .text-gray-700,
   .text-gray-900 {
     @apply text-white;
